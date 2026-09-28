@@ -12,11 +12,13 @@ function applyTheme(theme, toggleButton) {
   if (theme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
     toggleButton.setAttribute("aria-pressed", "true");
-    toggleButton.querySelector(".theme-toggle__label").textContent = "Light mode";
+    toggleButton.querySelector(".theme-toggle__label").textContent =
+      "Light mode";
   } else {
     document.documentElement.removeAttribute("data-theme");
     toggleButton.setAttribute("aria-pressed", "false");
-    toggleButton.querySelector(".theme-toggle__label").textContent = "Dark mode";
+    toggleButton.querySelector(".theme-toggle__label").textContent =
+      "Dark mode";
   }
 }
 
@@ -32,7 +34,8 @@ export function initThemeToggle() {
   applyTheme(startingTheme, toggleButton);
 
   toggleButton.addEventListener("click", () => {
-    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    const isDark =
+      document.documentElement.getAttribute("data-theme") === "dark";
     const nextTheme = isDark ? "light" : "dark";
     applyTheme(nextTheme, toggleButton);
     window.localStorage.setItem(STORAGE_KEY, nextTheme);
