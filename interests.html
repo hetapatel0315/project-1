@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Heta Patel" />
+  <meta name="description" content="Photography, cooking, and language interests of Heta Patel, with an interactive film-strip gallery." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Heta Patel &mdash; Interests</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-header__brand" href="index.html">Heta Patel</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Home</a></li>
+        <li><a class="site-nav__link" href="work.html">Work</a></li>
+        <li><a class="site-nav__link" href="interests.html" aria-current="page">Interests</a></li>
+        <li><a class="site-nav__link" href="ai-page.html">AI Generated Page</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-toggle__label">Dark mode</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h1 class="page-intro__title">Outside of coursework</h1>
+      <p class="page-intro__lede">
+        Photography is the thing I do the most, so it gets the interactive piece
+        below. It's built as a contact sheet: click a frame to bring it forward,
+        or use the arrow keys once one is open.
+      </p>
+    </section>
+
+    <div class="contact-sheet" aria-label="Photography contact sheet">
+      <ul class="contact-sheet__strip" id="contact-sheet">
+        <li class="contact-sheet__frame" tabindex="0" data-index="0">
+          <img src="images/frame-01.svg" alt="Line-drawing photo frame of a mountain skyline at dusk" />
+          <span class="contact-sheet__caption">Mountain skyline</span>
+        </li>
+        <li class="contact-sheet__frame" tabindex="0" data-index="1">
+          <img src="images/frame-02.svg" alt="Line-drawing photo frame of a city street at night" />
+          <span class="contact-sheet__caption">Night street</span>
+        </li>
+        <li class="contact-sheet__frame" tabindex="0" data-index="2">
+          <img src="images/frame-03.svg" alt="Line-drawing photo frame of a portrait silhouette" />
+          <span class="contact-sheet__caption">Portrait study</span>
+        </li>
+        <li class="contact-sheet__frame" tabindex="0" data-index="3">
+          <img src="images/frame-04.svg" alt="Line-drawing photo frame of a plated meal" />
+          <span class="contact-sheet__caption">Plated meal</span>
+        </li>
+        <li class="contact-sheet__frame" tabindex="0" data-index="4">
+          <img src="images/frame-05.svg" alt="Line-drawing photo frame of a steaming cup of coffee" />
+          <span class="contact-sheet__caption">Morning coffee</span>
+        </li>
+        <li class="contact-sheet__frame" tabindex="0" data-index="5">
+          <img src="images/frame-06.svg" alt="Line-drawing photo frame of an open book" />
+          <span class="contact-sheet__caption">Open book</span>
+        </li>
+      </ul>
+      <p class="contact-sheet__hint" id="contact-sheet-hint">No frame selected.</p>
+    </div>
+
+    <div class="interests-grid">
+      <article class="interests-grid__card">
+        <h2>Cooking</h2>
+        <p>
+          I like cooking as a break from screens &mdash; mostly Gujarati home cooking,
+          with the occasional attempt at something I saw and had to try myself. It's
+          one of the few things I do where a bug just means dinner's a little off,
+          not a stack trace.
+        </p>
+      </article>
+      <article class="interests-grid__card">
+        <h2>Languages</h2>
+        <p>
+          Gujarati is my first language, and I move between that, Hindi, and English
+          day to day, which comes in handy for translating things for family back home
+          &mdash; and occasionally for explaining a very literal translation joke that
+          doesn't land in English at all.
+        </p>
+      </article>
+      <article class="interests-grid__card">
+        <h2>Photography</h2>
+        <p>
+          Mostly street and food photography, shot on whatever's in my pocket at the
+          time. The gallery above is a small sample &mdash; I tend to take a lot more
+          photos than are ever worth keeping, which is its own kind of debugging.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Heta Patel. Built for CS 5610, Northeastern University.</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

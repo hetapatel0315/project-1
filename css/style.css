@@ -1,0 +1,463 @@
+/* ==========================================================================
+   Custom properties (light theme default, dark theme override below)
+   ========================================================================== */
+
+:root {
+  --color-bg: #f5f2ec;
+  --color-surface: #ffffff;
+  --color-text: #201f1d;
+  --color-text-muted: #5b5750;
+  --color-accent: #b23a2e;
+  --color-accent-soft: #d4a544;
+  --color-border: #ddd6c9;
+
+  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --max-width: 68rem;
+  --radius: 0.25rem;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1b1b1e;
+  --color-surface: #242327;
+  --color-text: #edeae3;
+  --color-text-muted: #b3ada2;
+  --color-accent: #e0574a;
+  --color-accent-soft: #d4a544;
+  --color-border: #38363a;
+}
+
+/* ==========================================================================
+   Reset-ish basics
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Header + nav
+   ========================================================================== */
+
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--color-text);
+  margin-right: auto;
+}
+
+.site-nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+}
+
+.site-nav__link:hover,
+.site-nav__link[aria-current="page"] {
+  color: var(--color-text);
+}
+
+.theme-toggle {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Layout shell
+   ========================================================================== */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.section-title,
+.page-intro__title {
+  font-size: 1.75rem;
+}
+
+.page-intro {
+  padding-top: 3rem;
+  max-width: 42rem;
+}
+
+.page-intro__lede {
+  color: var(--color-text-muted);
+}
+
+.page-intro__lede.notice {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.hero__eyebrow {
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 20ch;
+}
+
+.hero__lede {
+  max-width: 42rem;
+  color: var(--color-text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.hero__figure {
+  margin: 0;
+  text-align: center;
+}
+
+.hero__figure figcaption {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+}
+
+.hero__figure img {
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.button--primary {
+  background-color: var(--color-accent);
+  color: #fff8f2;
+}
+
+.button--secondary {
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   About cards
+   ========================================================================== */
+
+.about {
+  padding-top: 4rem;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.about__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.about__card h3 {
+  font-size: 1.0625rem;
+  margin-bottom: 0.5rem;
+}
+
+.about__card p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Contact section
+   ========================================================================== */
+
+.contact {
+  padding-top: 3.5rem;
+}
+
+.contact__lede {
+  color: var(--color-text-muted);
+  max-width: 40rem;
+}
+
+.contact__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.contact__list a {
+  font-family: var(--font-display);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.15rem;
+}
+
+/* ==========================================================================
+   Work / timeline page
+   ========================================================================== */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.timeline__item {
+  border-left: 3px solid var(--color-accent-soft);
+  padding-left: 1.5rem;
+}
+
+.timeline__course {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.timeline__item h2 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.375rem;
+}
+
+.timeline__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.timeline__tags li {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.2rem 0.6rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Interests page: contact sheet gallery
+   ========================================================================== */
+
+.contact-sheet {
+  margin-top: 2.5rem;
+}
+
+.contact-sheet__strip {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 0;
+  background: #111;
+  border-radius: var(--radius);
+}
+
+.contact-sheet__frame {
+  position: relative;
+  background: var(--color-surface);
+  border: 2px solid transparent;
+  border-radius: 2px;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.contact-sheet__frame:hover,
+.contact-sheet__frame:focus-visible {
+  border-color: var(--color-accent-soft);
+}
+
+.contact-sheet__frame.is-active {
+  transform: scale(1.35);
+  z-index: 2;
+  border-color: var(--color-accent);
+}
+
+.contact-sheet__caption {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: 0.35rem;
+  color: var(--color-text-muted);
+}
+
+.contact-sheet__hint {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.interests-grid__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.interests-grid__card p {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   AI-generated page
+   ========================================================================== */
+
+.ai-content {
+  max-width: 42rem;
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__figure {
+    order: -1;
+  }
+
+  .about__grid,
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-sheet__strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "heta-patel-homepage",
+  "version": "1.0.0",
+  "description": "Personal homepage for Heta Patel, built for CS 5610 Project 1.",
+  "type": "module",
+  "author": "Heta Patel",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint js/**/*.js",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^9.10.0",
+    "prettier": "^3.3.3"
+  }
+}

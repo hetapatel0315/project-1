@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="500" fill="#fafaf8" stroke="#ccc" />
+
+  <rect x="0" y="0" width="800" height="50" fill="#eee" stroke="#ccc" />
+  <text x="20" y="30" font-size="14" font-weight="bold" fill="#333">Heta Patel</text>
+  <text x="500" y="30" font-size="12" fill="#666">Home   Work   Interests   Written with AI</text>
+  <rect x="700" y="14" width="80" height="22" rx="3" fill="#fff" stroke="#999" />
+  <text x="712" y="29" font-size="10" fill="#666">Dark mode</text>
+
+  <text x="20" y="95" font-size="20" font-weight="bold" fill="#222">Outside of coursework</text>
+  <rect x="20" y="110" width="500" height="35" fill="#eee" />
+  <text x="26" y="124" font-size="10" fill="#888">intro paragraph explaining the</text>
+  <text x="26" y="137" font-size="10" fill="#888">contact-sheet interaction</text>
+
+  <!-- contact sheet strip -->
+  <rect x="20" y="160" width="700" height="90" fill="#1b1b1e" />
+  <g fill="#fff" stroke="#666">
+    <rect x="35" y="175" width="95" height="60" />
+    <rect x="140" y="175" width="95" height="60" />
+    <rect x="245" y="175" width="95" height="60" stroke="#d4a544" stroke-width="3" />
+    <rect x="350" y="175" width="95" height="60" />
+    <rect x="455" y="175" width="95" height="60" />
+    <rect x="560" y="175" width="95" height="60" />
+  </g>
+  <text x="270" y="253" font-size="9" fill="#888" transform="translate(0,25)">click a frame to bring it forward &middot; arrow keys to move between frames</text>
+  <text x="30" y="270" font-size="10" fill="#888">"Viewing: Portrait study (3 of 6). Arrow keys to move, Escape to close."</text>
+
+  <!-- interest cards -->
+  <rect x="20" y="300" width="225" height="90" fill="#fff" stroke="#ddd" />
+  <text x="30" y="320" font-size="12" font-weight="bold" fill="#333">Cooking</text>
+  <text x="30" y="340" font-size="9" fill="#888">short paragraph about Gujarati</text>
+  <text x="30" y="352" font-size="9" fill="#888">home cooking</text>
+
+  <rect x="265" y="300" width="225" height="90" fill="#fff" stroke="#ddd" />
+  <text x="275" y="320" font-size="12" font-weight="bold" fill="#333">Languages</text>
+  <text x="275" y="340" font-size="9" fill="#888">Gujarati, Hindi, English &mdash;</text>
+  <text x="275" y="352" font-size="9" fill="#888">translating for family</text>
+
+  <rect x="510" y="300" width="225" height="90" fill="#fff" stroke="#ddd" />
+  <text x="520" y="320" font-size="12" font-weight="bold" fill="#333">Photography</text>
+  <text x="520" y="340" font-size="9" fill="#888">street &amp; food photography,</text>
+  <text x="520" y="352" font-size="9" fill="#888">sample above</text>
+
+  <line x1="0" y1="485" x2="800" y2="485" stroke="#ccc" />
+  <text x="20" y="495" font-size="9" fill="#999">&copy; 2026 Heta Patel</text>
+</svg>
