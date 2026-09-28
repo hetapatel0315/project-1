@@ -1,111 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Heta Patel" />
-  <meta name="description" content="Coursework and project history for Heta Patel, MS Computer Science student at Northeastern University." />
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Heta Patel &mdash; Work</title>
-</head>
-<body>
-  <header class="site-header">
-    <a class="site-header__brand" href="index.html">Heta Patel</a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <ul class="site-nav__list">
-        <li><a class="site-nav__link" href="index.html">Home</a></li>
-        <li><a class="site-nav__link" href="work.html" aria-current="page">Work</a></li>
-        <li><a class="site-nav__link" href="interests.html">Interests</a></li>
-        <li><a class="site-nav__link" href="ai-page.html">AI Generated Page</a></li>
-      </ul>
-    </nav>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-      <span class="theme-toggle__label">Dark mode</span>
-    </button>
-  </header>
-
-  <main id="main-content">
-    <section class="page-intro">
-      <h1 class="page-intro__title">Coursework &amp; projects</h1>
-      <p class="page-intro__lede">
-        A running log of the bigger things I've built in class. Repos are private course
-        repos, so links point to descriptions rather than code where that's the case.
-      </p>
-    </section>
-
-    <div class="timeline">
-      <article class="timeline__item">
-        <div class="timeline__meta">
-          <span class="timeline__course">CS 5010 &mdash; Programming Design Paradigm</span>
-        </div>
-        <h2>Calendar application</h2>
-        <p>
-          A desktop calendar app built in Java with a Swing GUI, following an MVC
-          structure. I owned the controller, view, and the CSV/ICS export layers.
-          It supports recurring events through a small model of event series,
-          recurrence rules, and frequencies. Tested with JUnit 4 and checked for
-          coverage with JaCoCo and mutation testing with PIT.
-        </p>
-        <ul class="timeline__tags">
-          <li>Java</li><li>Swing</li><li>MVC</li><li>Gradle</li><li>JUnit</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Heta Patel" />
+    <meta
+      name="description"
+      content="Coursework and project history for Heta Patel, MS Computer Science student at Northeastern University."
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Heta Patel &mdash; Work</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-header__brand" href="index.html">Heta Patel</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="work.html" aria-current="page">Work</a></li>
+          <li><a class="site-nav__link" href="interests.html">Interests</a></li>
+          <li><a class="site-nav__link" href="ai-page.html">AI Generated Page</a></li>
         </ul>
-      </article>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        <span class="theme-toggle__label">Dark mode</span>
+      </button>
+    </header>
 
-      <article class="timeline__item">
-        <div class="timeline__meta">
-          <span class="timeline__course">CS 5200 &mdash; Database Management Systems</span>
-        </div>
-        <h2>Library management system</h2>
-        <p>
-          A six-table relational schema and backing application for a library system,
-          built solo in Python against MySQL. Later coursework on the same schema
-          added stored procedures, triggers, and functions, plus a small Python CLI
-          on top of them.
+    <main id="main-content">
+      <section class="page-intro">
+        <h1 class="page-intro__title">Coursework &amp; projects</h1>
+        <p class="page-intro__lede">
+          A running log of the bigger things I've built in class. Repos are private course repos, so
+          links point to descriptions rather than code where that's the case.
         </p>
-        <ul class="timeline__tags">
-          <li>Python</li><li>MySQL</li><li>Stored procedures</li>
-        </ul>
-      </article>
+      </section>
 
-      <article class="timeline__item">
-        <div class="timeline__meta">
-          <span class="timeline__course">Programming Design Paradigm</span>
-        </div>
-        <h2>JSON tree hierarchy</h2>
-        <p>
-          A Java implementation of a JSON document modeled as a tree, built as
-          preparation for a codewalk presentation on recursive data structures.
-        </p>
-        <ul class="timeline__tags">
-          <li>Java</li><li>Recursion</li><li>Data structures</li>
-        </ul>
-      </article>
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="timeline__meta">
+            <span class="timeline__course">CS 5010 &mdash; Programming Design Paradigm</span>
+          </div>
+          <h2>Calendar application</h2>
+          <p>
+            A desktop calendar app built in Java with a Swing GUI, following an MVC structure. I
+            owned the controller, view, and the CSV/ICS export layers. It supports recurring events
+            through a small model of event series, recurrence rules, and frequencies. Tested with
+            JUnit 4 and checked for coverage with JaCoCo and mutation testing with PIT.
+          </p>
+          <ul class="timeline__tags">
+            <li>Java</li>
+            <li>Swing</li>
+            <li>MVC</li>
+            <li>Gradle</li>
+            <li>JUnit</li>
+          </ul>
+        </article>
 
-      <article class="timeline__item">
-        <div class="timeline__meta">
-          <span class="timeline__course">Before Northeastern</span>
-        </div>
-        <h2>Data science internships</h2>
-        <p>
-          Internship work in data science and applied AI during my undergraduate
-          years at Sarvajanik University, alongside coursework with honours in
-          data science.
-        </p>
-        <ul class="timeline__tags">
-          <li>Data science</li><li>Machine learning</li>
-        </ul>
-      </article>
-    </div>
-  </main>
+        <article class="timeline__item">
+          <div class="timeline__meta">
+            <span class="timeline__course">CS 5200 &mdash; Database Management Systems</span>
+          </div>
+          <h2>Library management system</h2>
+          <p>
+            A six-table relational schema and backing application for a library system, built solo
+            in Python against MySQL. Later coursework on the same schema added stored procedures,
+            triggers, and functions, plus a small Python CLI on top of them.
+          </p>
+          <ul class="timeline__tags">
+            <li>Python</li>
+            <li>MySQL</li>
+            <li>Stored procedures</li>
+          </ul>
+        </article>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Heta Patel. Built for CS 5610, Northeastern University.</p>
-  </footer>
+        <article class="timeline__item">
+          <div class="timeline__meta">
+            <span class="timeline__course">Programming Design Paradigm</span>
+          </div>
+          <h2>JSON tree hierarchy</h2>
+          <p>
+            A Java implementation of a JSON document modeled as a tree, built as preparation for a
+            codewalk presentation on recursive data structures.
+          </p>
+          <ul class="timeline__tags">
+            <li>Java</li>
+            <li>Recursion</li>
+            <li>Data structures</li>
+          </ul>
+        </article>
 
-  <script type="module" src="js/main.js"></script>
-</body>
+        <article class="timeline__item">
+          <div class="timeline__meta">
+            <span class="timeline__course">Before Northeastern</span>
+          </div>
+          <h2>Data science internships</h2>
+          <p>
+            Internship work in data science and applied AI during my undergraduate years at
+            Sarvajanik University, alongside coursework with honours in data science.
+          </p>
+          <ul class="timeline__tags">
+            <li>Data science</li>
+            <li>Machine learning</li>
+          </ul>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Heta Patel. Built for CS 5610, Northeastern University.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
