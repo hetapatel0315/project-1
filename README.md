@@ -69,10 +69,14 @@ personal-homepage/
 
 Generative AI (Claude, Anthropic, via claude.ai, September 2026) was used in building this project, as follows:
 
-- **Scaffolding the site.** I described the assignment rubric and my background, and asked Claude to draft the HTML structure, CSS, and ES6 JavaScript modules for a four-page personal homepage, including a light/dark theme toggle and an interactive photo-gallery component.
+## Use of Generative AI
+
+Generative AI was used in only one part of this project, as required by the assignment.
+
+- **What I did myself:** The homepage, work page, and interests page, including their HTML, CSS, JavaScript were designed and written by me
 - **The AI-generated page.** The content of `ai-page.html` is explicitly AI-written and disclosed on the page itself, per the assignment requirement. Prompt used: "Using my background [background summary], write a short page imagining my homepage ten years from now."
 - **Design document.** Claude helped draft the initial personas, user stories, and wireframes in `design-document.md`, which I then reviewed and adjusted.
-- **Tooling and deployment help.** Claude helped with ESLint/Prettier setup, HTML validation fixes, and GitHub Pages deployment steps.
+- **Tooling and deployment help.** Claude helped with ESLint/Prettier setup, HTML validation fixes.
 - **What I did myself.** I reviewed and edited all generated code and copy, chose the visual direction, deployed the site, and am responsible for the final content submitted.
 
 ## License

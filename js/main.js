@@ -5,8 +5,18 @@
 
 import { initThemeToggle } from "./theme.js";
 import { initContactSheet } from "./contact-sheet.js";
+import { initReveal } from "./reveal.js";
+import { initSkills } from "./skills.js";
+import { initTerminal } from "./terminal.js";
+import { initAccordion } from "./accordion.js";
+import { initAiCycle } from "./ai-cycle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initContactSheet();
+  initReveal();
+  initSkills();
+  initTerminal();
+  initAccordion();
+  initAiCycle();
 });

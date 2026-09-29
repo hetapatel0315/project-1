@@ -46,7 +46,7 @@
     </header>
 
     <main id="main-content">
-      <section class="page-intro">
+      <section class="page-intro reveal">
         <h1 class="page-intro__title">Coursework &amp; projects</h1>
         <p class="page-intro__lede">
           A running log of the bigger things I've built in class. Repos are
@@ -56,7 +56,7 @@
       </section>
 
       <div class="timeline">
-        <article class="timeline__item">
+        <article class="timeline__item reveal">
           <div class="timeline__meta">
             <span class="timeline__course"
               >CS 5010 &mdash; Programming Design Paradigm</span
@@ -77,9 +77,26 @@
             <li>Gradle</li>
             <li>JUnit</li>
           </ul>
+          <button
+            class="timeline__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="detail-calendar"
+          >
+            Read more
+          </button>
+          <div class="timeline__detail" id="detail-calendar" hidden>
+            <p>
+              The trickiest part was recurrence: modeling a series that can have
+              exceptions without the whole model turning into a tangle of special 
+              cases. Splitting recurrence rules from individual events, rather than 
+              expanding every occurrence up front, made the CSV/ICS export layer much
+              simpler to write on top of.
+            </p>
+          </div>
         </article>
 
-        <article class="timeline__item">
+        <article class="timeline__item reveal">
           <div class="timeline__meta">
             <span class="timeline__course"
               >CS 5200 &mdash; Database Management Systems</span
@@ -97,9 +114,27 @@
             <li>MySQL</li>
             <li>Stored procedures</li>
           </ul>
+          <button
+            class="timeline__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="detail-library"
+          >
+            Read more
+          </button>
+          <div class="timeline__detail" id="detail-library" hidden>
+            <p>
+              Working solo meant the schema design decisions were entirely mine
+              to defend &mdash; normalizing far enough to avoid update anomalies
+              without over-splitting tables into joins I'd regret writing later.
+              Adding triggers and stored procedures afterward was a good stress
+              test of whether the original schema actually held up under real
+              logic.
+            </p>
+          </div>
         </article>
 
-        <article class="timeline__item">
+        <article class="timeline__item reveal">
           <div class="timeline__meta">
             <span class="timeline__course">Programming Design Paradigm</span>
           </div>
@@ -116,7 +151,7 @@
           </ul>
         </article>
 
-        <article class="timeline__item">
+        <article class="timeline__item reveal">
           <div class="timeline__meta">
             <span class="timeline__course">Before Northeastern</span>
           </div>

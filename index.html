@@ -8,25 +8,13 @@
       name="description"
       content="Personal homepage of Heta Patel, MS Computer Science student at Northeastern University's Khoury College."
     />
-    <meta property="og:type" content="website" />
     <meta property="og:title" content="Heta Patel — Personal Homepage" />
     <meta
       property="og:description"
-      content="Personal homepage of Heta Patel, MS Computer Science student at Northeastern University's Khoury College."
+      content="MS Computer Science student at Northeastern's Khoury College. Coursework, projects, and interests."
     />
-    <meta
-      property="og:url"
-      content="https://hetapatel0315.github.io/project-1/"
-    />
-    <meta
-      property="og:image"
-      content="https://hetapatel0315.github.io/project-1/images/og-image.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Screenshot of Heta Patel's homepage in dark mode"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="images/og-image.png" />
+    <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +38,7 @@
           <li><a class="site-nav__link" href="work.html">Work</a></li>
           <li><a class="site-nav__link" href="interests.html">Interests</a></li>
           <li>
-            <a class="site-nav__link" href="ai-page.html">AI generated</a>
+            <a class="site-nav__link" href="ai-page.html">AI Generated Page</a>
           </li>
         </ul>
       </nav>
@@ -103,7 +91,7 @@
         </figure>
       </section>
 
-      <section class="about">
+      <section class="about reveal">
         <h2 class="section-title">A short version of my background</h2>
         <div class="about__grid">
           <article class="about__card">
@@ -130,16 +118,100 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="skills reveal" id="skills">
+        <h2 class="section-title">Where my time has gone</h2>
+        <p class="skills__lede">
+          A rough, self-assessed breakdown &mdash; not a certification, just a
+          sense of where I've spent the most hours.
+        </p>
+        <ul class="skills__list">
+          <li class="skill">
+            <div class="skill__label">
+              <span>Java</span><span>Comfortable</span>
+            </div>
+            <div class="skill__track">
+              <div class="skill__fill" data-level="80"></div>
+            </div>
+          </li>
+          <li class="skill">
+            <div class="skill__label">
+              <span>Python</span><span>Comfortable</span>
+            </div>
+            <div class="skill__track">
+              <div class="skill__fill" data-level="75"></div>
+            </div>
+          </li>
+          <li class="skill">
+            <div class="skill__label">
+              <span>SQL &amp; database design</span><span>Solid</span>
+            </div>
+            <div class="skill__track">
+              <div class="skill__fill" data-level="70"></div>
+            </div>
+          </li>
+          <li class="skill">
+            <div class="skill__label">
+              <span>Machine learning</span><span>Growing</span>
+            </div>
+            <div class="skill__track">
+              <div class="skill__fill" data-level="55"></div>
+            </div>
+          </li>
+          <li class="skill">
+            <div class="skill__label">
+              <span>Git &amp; version control</span><span>Comfortable</span>
+            </div>
+            <div class="skill__track">
+              <div class="skill__fill" data-level="80"></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="terminal-section reveal">
+        <h2 class="section-title">Or just ask</h2>
+        <p class="skills__lede">
+          A tiny command line, in case scrolling isn't your thing. Try
+          <code>whoami</code>, <code>skills</code>, <code>work</code>,
+          <code>contact</code>, or <code>help</code>.
+        </p>
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span class="terminal__dot"></span>
+            <span class="terminal__dot"></span>
+            <span class="terminal__dot"></span>
+            <span class="terminal__title">heta@homepage: ~</span>
+          </div>
+          <div class="terminal__output" id="terminal-output" aria-live="polite">
+            <p class="terminal__line">Type "help" to get started.</p>
+          </div>
+          <form class="terminal__form" id="terminal-form">
+            <label class="terminal__prompt-label" for="terminal-input"
+              >Command input</label
+            >
+            <span class="terminal__prompt" aria-hidden="true">&gt;</span>
+            <input
+              class="terminal__input"
+              id="terminal-input"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="type a command..."
+            />
+          </form>
+        </div>
+      </section>
+
+      <section class="contact reveal">
         <h2 class="section-title">Get in touch</h2>
         <p class="contact__lede">
-          If you're a classmate comparing notes, or just found this page and
-          want to say hi &mdash; here's where to find me.
+          If you're a classmate comparing notes, or just found this
+          page and want to say hi &mdash; here's where to find me.
         </p>
         <ul class="contact__list">
           <li>
             <a href="mailto:patel.he@northeastern.edu"
-              >patel.he@northeastern.edu</a
+              >patel.hetavi@northeastern.edu</a
             >
           </li>
           <li>
@@ -152,7 +224,7 @@
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/patel-heta"
+              href="https://www.linkedin.com/"
               target="_blank"
               rel="noopener noreferrer"
               >LinkedIn</a
