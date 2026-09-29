@@ -11,7 +11,7 @@ Heta Patel
 
 ## Class link
 
-[CS 5610 Web Development, Northeastern University Khoury College] https://johnguerra.co/classes/webDevelopment_online_fall_2026
+[CS 5610 Web Development, Northeastern University Khoury College](https://johnguerra.co/classes/webDevelopment_online_fall_2026)
 
 ## Project objective
 
@@ -55,6 +55,11 @@ personal-homepage/
     main.js
     theme.js
     contact-sheet.js
+    reveal.js
+    skills.js
+    terminal.js
+    accordion.js
+    ai-cycle.js
   images/
     favicon.svg, aperture.svg, frame-01.svg ... frame-06.svg, og-image.png
     mockups/          (wireframes for the design document)
@@ -63,21 +68,17 @@ personal-homepage/
   eslint.config.js
   .prettierrc.json
   LICENSE
-```
-
-## Use of GenAI tools
-
-Generative AI (Claude, Anthropic, via claude.ai, September 2026) was used in building this project, as follows:
+  ''''
 
 ## Use of Generative AI
 
-Generative AI was used in only one part of this project, as required by the assignment.
+Generative AI was used by the assignment.
 
-- **What I did myself:** The homepage, work page, and interests page, including their HTML, CSS, JavaScript were designed and written by me
-- **The AI-generated page.** The content of `ai-page.html` is explicitly AI-written and disclosed on the page itself, per the assignment requirement. Prompt used: "Using my background [background summary], write a short page imagining my homepage ten years from now."
-- **Design document.** Claude helped draft the initial personas, user stories, and wireframes in `design-document.md`, which I then reviewed and adjusted.
+- **What I did myself:** The homepage, work page, and interests page, including their HTML, CSS, JavaScript were designed by me
+- **The AI-generated page.** The content of `ai-page.html` is explicitly AI-written and disclosed on the page itself, per the assignment requirement. Prompt used: "Using my background [background summary], write a short page imagining my homepage ten years. 5 year and year from now."
+- **Design document.** helped draft the initial personas, user stories, and wireframes in `design-document.md`, which I then reviewed and adjusted.
 - **Tooling and deployment help.** Claude helped with ESLint/Prettier setup, HTML validation fixes.
-- **What I did myself.** I reviewed and edited all generated code and copy, chose the visual direction, deployed the site, and am responsible for the final content submitted.
+- **What I did myself.** I reviewed and edited code and copy, chose the visual direction, deployed the site, and am responsible for the final content submitted.
 
 ## License
 
