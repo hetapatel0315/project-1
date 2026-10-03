@@ -26,6 +26,11 @@ export function initContactSheet() {
     activeIndex = index;
     const frame = frames[index];
     frame.classList.add("is-active");
+    // Keep real focus on the active frame so the focus ring and the
+    // selection cannot drift apart during arrow-key navigation.
+    if (document.activeElement !== frame) {
+      frame.focus();
+    }
     const caption = frame.querySelector(".contact-sheet__caption").textContent;
     hint.textContent = `Viewing: ${caption} (${index + 1} of ${frames.length}). Use arrow keys to move, Escape to close.`;
   }

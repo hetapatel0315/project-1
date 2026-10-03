@@ -12,11 +12,23 @@ import { initAccordion } from "./accordion.js";
 import { initAiCycle } from "./ai-cycle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  initThemeToggle();
-  initContactSheet();
-  initReveal();
-  initSkills();
-  initTerminal();
-  initAccordion();
-  initAiCycle();
+  // The features are independent, so one throwing must not prevent the
+  // others from initialising.
+  const features = [
+    initThemeToggle,
+    initContactSheet,
+    initReveal,
+    initSkills,
+    initTerminal,
+    initAccordion,
+    initAiCycle,
+  ];
+
+  for (const init of features) {
+    try {
+      init();
+    } catch (error) {
+      console.error(`${init.name} failed to initialise`, error);
+    }
+  }
 });

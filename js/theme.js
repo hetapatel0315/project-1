@@ -5,7 +5,21 @@
 const STORAGE_KEY = "hp-theme";
 
 function getStoredTheme() {
-  return window.localStorage.getItem(STORAGE_KEY);
+  // localStorage throws rather than returning null in Safari private
+  // browsing and anywhere site data is blocked.
+  try {
+    return window.localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function storeTheme(theme) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, theme);
+  } catch {
+    // The preference just will not persist; the toggle still works today.
+  }
 }
 
 function applyTheme(theme, toggleButton) {
@@ -38,6 +52,6 @@ export function initThemeToggle() {
       document.documentElement.getAttribute("data-theme") === "dark";
     const nextTheme = isDark ? "light" : "dark";
     applyTheme(nextTheme, toggleButton);
-    window.localStorage.setItem(STORAGE_KEY, nextTheme);
+    storeTheme(nextTheme);
   });
 }
